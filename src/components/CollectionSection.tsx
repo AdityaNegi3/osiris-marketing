@@ -28,26 +28,26 @@ const ServicesSection: React.FC = () => {
       title: "LEAD GENERATION",
       description: "Exclusive lead generation strategies targeting high-net-worth individuals and premium market segments."
     },
-    {
-      id: 5,
-      title: "PAID ADVERTISEMENT",
-      description: "Strategic paid advertising campaigns across premium platforms with sophisticated targeting and optimization."
-    },
-    {
-      id: 6,
-      title: "SOCIAL MEDIA MANAGEMENT",
-      description: "Discreet social media management and content curation for executives and luxury brands maintaining exclusivity."
-    },
-    {
-      id: 7,
-      title: "CALL BOT SYSTEMS",
-      description: "Advanced AI-powered inbound and outbound calling systems for premium customer service and lead qualification."
-    },
-    {
-      id: 8,
-      title: "EXECUTIVE PERSONAL BRANDING",
-      description: "Discreet reputation management and thought leadership positioning for C-suite executives and high-profile individuals."
-    }
+    // {
+    //   id: 5,
+    //   title: "PAID ADVERTISEMENT",
+    //   description: "Strategic paid advertising campaigns across premium platforms with sophisticated targeting and optimization."
+    // },
+    // {
+    //   id: 6,
+    //   title: "SOCIAL MEDIA MANAGEMENT",
+    //   description: "Discreet social media management and content curation for executives and luxury brands maintaining exclusivity."
+    // },
+    // {
+    //   id: 7,
+    //   title: "CALL BOT SYSTEMS",
+    //   description: "Advanced AI-powered inbound and outbound calling systems for premium customer service and lead qualification."
+    // },
+    // {
+    //   id: 8,
+    //   title: "EXECUTIVE PERSONAL BRANDING",
+    //   description: "Discreet reputation management and thought leadership positioning for C-suite executives and high-profile individuals."
+    // }
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);

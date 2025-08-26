@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-black text-white;
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-black;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gold-800/50 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gold-600/50;
+  }
+}
+
+/* For Firefox */
+@supports (scrollbar-color: auto) {
+  * {
+    scrollbar-color: rgba(212, 175, 55, 0.5) #000;
+    scrollbar-width: thin;
+  }
+}
+
+/* Ensure images are properly loaded with a fade-in effect */
+img {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+img.loaded {
+  opacity: 1;
+}
+
+/* Custom animation for subtle element movements */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

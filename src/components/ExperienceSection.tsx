@@ -31,7 +31,7 @@ const PortfolioSection: React.FC = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.2 }}
           >
             <div className="relative h-[300px] overflow-hidden mb-6 bg-gradient-to-br from-gold-400/10 to-black border border-gold-400/20">
               <div className="flex items-center justify-center h-full">
@@ -55,7 +55,7 @@ const PortfolioSection: React.FC = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.2 }}
           >
             <div className="relative h-[300px] overflow-hidden mb-6 bg-gradient-to-br from-gold-400/10 to-black border border-gold-400/20">
               <div className="flex items-center justify-center h-full">
@@ -79,7 +79,7 @@ const PortfolioSection: React.FC = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.4 }}
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.2 }}
           >
             <div className="relative h-[300px] overflow-hidden mb-6 bg-gradient-to-br from-gold-400/10 to-black border border-gold-400/20">
               <div className="flex items-center justify-center h-full">
@@ -103,7 +103,7 @@ const PortfolioSection: React.FC = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.6 }}
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.2 }}
           >
             <div className="relative h-[300px] overflow-hidden mb-6 bg-gradient-to-br from-gold-400/10 to-black border border-gold-400/20">
               <div className="flex items-center justify-center h-full">

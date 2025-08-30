@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 interface ServiceItem {
   id: number;
@@ -28,26 +29,6 @@ const ServicesSection: React.FC = () => {
       title: "LEAD GENERATION",
       description: "Exclusive lead generation strategies targeting high-net-worth individuals and premium market segments."
     },
-    // {
-    //   id: 5,
-    //   title: "PAID ADVERTISEMENT",
-    //   description: "Strategic paid advertising campaigns across premium platforms with sophisticated targeting and optimization."
-    // },
-    // {
-    //   id: 6,
-    //   title: "SOCIAL MEDIA MANAGEMENT",
-    //   description: "Discreet social media management and content curation for executives and luxury brands maintaining exclusivity."
-    // },
-    // {
-    //   id: 7,
-    //   title: "CALL BOT SYSTEMS",
-    //   description: "Advanced AI-powered inbound and outbound calling systems for premium customer service and lead qualification."
-    // },
-    // {
-    //   id: 8,
-    //   title: "EXECUTIVE PERSONAL BRANDING",
-    //   description: "Discreet reputation management and thought leadership positioning for C-suite executives and high-profile individuals."
-    // }
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -65,8 +46,13 @@ const ServicesSection: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-          {/* Service Visual */}
-          <div className="relative h-[500px] order-2 lg:order-1">
+          {/* Service Visual - animate from left */}
+          <motion.div
+            className="relative h-[500px] order-2 lg:order-1"
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >
             <div className="absolute inset-0 bg-gradient-to-br from-gold-400/20 via-gold-400/10 to-black border border-gold-400/30">
               <div className="flex items-center justify-center h-full">
                 <div className="text-center">
@@ -80,17 +66,22 @@ const ServicesSection: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          {/* Service Information */}
-          <div className="order-1 lg:order-2">
+          {/* Service Information - animate from right */}
+          <motion.div
+            className="order-1 lg:order-2"
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >
             <div className="space-y-8">
               {services.map((item, index) => (
-                <div 
+                <div
                   key={item.id}
                   className={`cursor-pointer group transition-all duration-500 ${
-                    index === activeIndex 
-                      ? 'pl-6 border-l border-gold-400' 
+                    index === activeIndex
+                      ? 'pl-6 border-l border-gold-400'
                       : 'pl-6 border-l border-white/10 opacity-60 hover:opacity-80'
                   }`}
                   onClick={() => setActiveIndex(index)}
@@ -112,7 +103,7 @@ const ServicesSection: React.FC = () => {
                 SCHEDULE CONSULTATION
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

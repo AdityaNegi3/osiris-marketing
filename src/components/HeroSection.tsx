@@ -10,7 +10,7 @@ const HeroSection: React.FC = () => {
         style={{
           backgroundImage: "url('/osiris-bg.png')",
           backgroundPosition: 'center 30%',
-          filter: 'brightness(1.5)',
+          filter: 'brightness(2)',
         }}
       />
 

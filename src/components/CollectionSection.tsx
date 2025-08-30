@@ -11,7 +11,7 @@ const ServicesSection: React.FC = () => {
   const services: ServiceItem[] = [
     {
       id: 1,
-      title: "LUXURY BRAND STRATEGY",
+      title: "LUwXURY BRAND STRATEGY",
       description: "Comprehensive brand positioning and narrative development for ultra-premium brands seeking to dominate their market segment."
     },
     {

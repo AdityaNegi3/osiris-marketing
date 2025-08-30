@@ -6,7 +6,7 @@ const HeroSection: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (heroRef.current && textRef.current) {
+      if (textRef.current) {
         const scrollPosition = window.scrollY;
         const opacity = Math.max(1 - scrollPosition / 500, 0.2);
         const translateY = scrollPosition * 0.3;
@@ -25,7 +25,7 @@ const HeroSection: React.FC = () => {
       ref={heroRef}
       className="relative h-screen w-full overflow-hidden bg-black"
     >
-      {/* Background Image with Overlay */}
+      {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
@@ -35,19 +35,19 @@ const HeroSection: React.FC = () => {
         }}
       />
 
-      {/* Golden gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black/90"></div>
+      {/* Golden gradient overlay (static, never animates) */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black/90 pointer-events-none"></div>
 
-      {/* Content */}
-      <div
-        ref={textRef}
-        className="absolute inset-0 flex flex-col items-center justify-center px-4 sm:px-6 md:px-12 transition-all duration-500 ease-out"
-      >
-        <div className="text-center max-w-3xl">
-          <h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight tracking-[0.2em] mb-6">
+      {/* Text Content with scroll animation */}
+      <div className="absolute inset-0 flex items-center justify-center px-4 sm:px-6 md:px-12">
+        <div
+          ref={textRef}
+          className="text-center max-w-3xl transition-all duration-500 ease-out"
+        >
+          <h1 className="text-white text-3xl sm:text-4xl md:text-6xl font-extralight tracking-wide leading-tight mb-6 break-words">
             OSIRIS
           </h1>
-          <p className="text-gold-300 text-lg sm:text-xl md:text-2xl lg:text-3xl font-light tracking-widest mb-6">
+          <p className="text-gold-300 text-base sm:text-lg md:text-2xl font-light tracking-wider leading-snug mb-6 max-w-md mx-auto">
             MARKETING FOR THE EXCLUSIVE
           </p>
           <div className="w-16 sm:w-20 h-[1px] bg-gold-400 mx-auto mb-10"></div>
@@ -65,7 +65,7 @@ const HeroSection: React.FC = () => {
         </div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Scroll Indicator */}
       <div className="absolute bottom-8 sm:bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-white/50 animate-pulse">
         <p className="text-xs tracking-widest mb-2">DISCOVER</p>
         <div className="w-[1px] h-8 sm:h-10 bg-white/30"></div>

@@ -1,30 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
+import { motion } from 'framer-motion';
 
 const HeroSection: React.FC = () => {
-  const heroRef = useRef<HTMLDivElement>(null);
-  const textRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (heroRef.current && textRef.current) {
-        const scrollPosition = window.scrollY;
-        const opacity = Math.max(1 - scrollPosition / 500, 0.2);
-        const translateY = scrollPosition * 0.3;
-
-        textRef.current.style.opacity = opacity.toString();
-        textRef.current.style.transform = `translateY(${translateY}px)`;
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
-    <div
-      ref={heroRef}
-      className="relative h-screen w-full overflow-hidden bg-black"
-    >
+    <div className="relative h-screen w-full overflow-hidden bg-black">
       {/* Background Image with Overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -39,11 +18,13 @@ const HeroSection: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black/90"></div>
 
       {/* Content */}
-      <div
-        ref={textRef}
-        className="absolute inset-0 flex flex-col items-center justify-center px-4 sm:px-6 md:px-12 transition-all duration-500 ease-out"
-      >
-        <div className="text-center max-w-3xl">
+      <div className="absolute inset-0 flex flex-col items-center justify-center px-4 sm:px-6 md:px-12">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: 'easeOut' }}
+          className="text-center max-w-3xl"
+        >
           <h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight tracking-[0.2em] mb-6">
             OSIRIS
           </h1>
@@ -52,9 +33,9 @@ const HeroSection: React.FC = () => {
           </p>
           <div className="w-16 sm:w-20 h-[1px] bg-gold-400 mx-auto mb-10"></div>
           <p className="text-white/80 text-sm sm:text-base md:text-lg max-w-xl mx-auto font-light leading-relaxed mb-10">
-            We craft extraordinary brand narratives and marketing strategies exclusively
-            for luxury brands, high-net-worth individuals, and elite organizations that
-            demand nothing less than perfection.
+            We craft extraordinary brand narratives and marketing strategies
+            exclusively for luxury brands, high-net-worth individuals, and elite
+            organizations that demand nothing less than perfection.
           </p>
           <a
             href="#consultation"
@@ -62,7 +43,7 @@ const HeroSection: React.FC = () => {
           >
             REQUEST CONSULTATION
           </a>
-        </div>
+        </motion.div>
       </div>
 
       {/* Scroll indicator */}

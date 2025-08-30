@@ -12,22 +12,26 @@ const ServicesSection: React.FC = () => {
     {
       id: 1,
       title: "LUXURY BRAND STRATEGY",
-      description: "Comprehensive brand positioning and narrative development for ultra-premium brands seeking to dominate their market segment."
+      description:
+        "Comprehensive brand positioning and narrative development for ultra-premium brands seeking to dominate their market segment.",
     },
     {
       id: 2,
       title: "WEB DEVELOPMENT",
-      description: "Bespoke website development and digital experiences crafted exclusively for luxury brands and high-profile clients."
+      description:
+        "Bespoke website development and digital experiences crafted exclusively for luxury brands and high-profile clients.",
     },
     {
       id: 3,
       title: "CRM & AUTOMATION",
-      description: "Advanced customer relationship management and marketing automation systems for sophisticated client engagement."
+      description:
+        "Advanced customer relationship management and marketing automation systems for sophisticated client engagement.",
     },
     {
       id: 4,
       title: "LEAD GENERATION",
-      description: "Exclusive lead generation strategies targeting high-net-worth individuals and premium market segments."
+      description:
+        "Exclusive lead generation strategies targeting high-net-worth individuals and premium market segments.",
     },
   ];
 
@@ -41,18 +45,19 @@ const ServicesSection: React.FC = () => {
             Our Services
           </h2>
           <p className="text-white/60 max-w-2xl mx-auto">
-            Comprehensive digital marketing solutions crafted exclusively for discerning clients
+            Comprehensive digital marketing solutions crafted exclusively for
+            discerning clients
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-          {/* Service Visual - animate from left when in view */}
+          {/* Service Visual - animate from left */}
           <motion.div
             className="relative h-[500px] order-2 lg:order-1"
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }} // 👈 one-time
           >
             <div className="absolute inset-0 bg-gradient-to-br from-gold-400/20 via-gold-400/10 to-black border border-gold-400/30">
               <div className="flex items-center justify-center h-full">
@@ -69,13 +74,13 @@ const ServicesSection: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Service Information - animate from right when in view */}
+          {/* Service Information - animate from right */}
           <motion.div
             className="order-1 lg:order-2"
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }} // 👈 one-time
           >
             <div className="space-y-8">
               {services.map((item, index) => (
@@ -83,14 +88,18 @@ const ServicesSection: React.FC = () => {
                   key={item.id}
                   className={`cursor-pointer group transition-all duration-500 ${
                     index === activeIndex
-                      ? 'pl-6 border-l border-gold-400'
-                      : 'pl-6 border-l border-white/10 opacity-60 hover:opacity-80'
+                      ? "pl-6 border-l border-gold-400"
+                      : "pl-6 border-l border-white/10 opacity-60 hover:opacity-80"
                   }`}
                   onClick={() => setActiveIndex(index)}
                 >
-                  <h3 className={`text-lg md:text-xl font-light tracking-wide transition-colors ${
-                    index === activeIndex ? 'text-gold-400' : 'text-white group-hover:text-gold-300'
-                  }`}>
+                  <h3
+                    className={`text-lg md:text-xl font-light tracking-wide transition-colors ${
+                      index === activeIndex
+                        ? "text-gold-400"
+                        : "text-white group-hover:text-gold-300"
+                    }`}
+                  >
                     {item.title}
                   </h3>
                   <p className="text-white/70 mt-2 max-w-lg text-sm">
@@ -101,7 +110,10 @@ const ServicesSection: React.FC = () => {
             </div>
 
             <div className="mt-12">
-              <a href="#consultation" className="inline-block bg-transparent border border-gold-400 text-gold-400 px-6 py-3 text-sm tracking-wider hover:bg-gold-400/10 transition-all">
+              <a
+                href="#consultation"
+                className="inline-block bg-transparent border border-gold-400 text-gold-400 px-6 py-3 text-sm tracking-wider hover:bg-gold-400/10 transition-all"
+              >
                 SCHEDULE CONSULTATION
               </a>
             </div>

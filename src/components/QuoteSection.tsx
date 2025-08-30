@@ -14,7 +14,7 @@ const QuoteSection: React.FC = () => {
             initial={{ opacity: 0, y: -50, scale: 0.8 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}  // 👈 one-time animation
             className="text-gold-400 text-6xl font-serif mb-12"
           >
             "
@@ -25,7 +25,7 @@ const QuoteSection: React.FC = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }} // 👈 one-time animation
             className="text-white text-2xl md:text-3xl lg:text-4xl font-light tracking-wide leading-relaxed mb-8"
           >
             We don't create marketing campaigns for everyone.
@@ -37,7 +37,7 @@ const QuoteSection: React.FC = () => {
             initial={{ scaleX: 0, opacity: 0 }}
             whileInView={{ scaleX: 1, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }} // 👈 one-time animation
             className="w-20 h-[1px] bg-gold-400 mx-auto my-12 origin-center"
           ></motion.div>
 
@@ -46,7 +46,7 @@ const QuoteSection: React.FC = () => {
             initial={{ opacity: 0, letterSpacing: "0.1em" }}
             whileInView={{ opacity: 1, letterSpacing: "0.25em" }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.9 }}
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }} // 👈 one-time animation
             className="text-gold-300 text-xl md:text-2xl font-light tracking-wider"
           >
             MARKETING FOR THE EXCLUSIVE

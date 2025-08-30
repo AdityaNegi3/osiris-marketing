@@ -17,7 +17,9 @@ const PortfolioSection: React.FC = () => {
 
       <div className="container mx-auto px-4 md:px-6 lg:px-8 relative">
         <div className="text-center mb-20">
-          <h2 className="text-white text-3xl md:text-4xl font-light tracking-wide mb-4">Our Expertise</h2>
+          <h2 className="text-white text-3xl md:text-4xl font-light tracking-wide mb-4">
+            Our Expertise
+          </h2>
           <div className="w-20 h-[1px] bg-gold-400 mx-auto mb-8"></div>
           <p className="text-white/60 max-w-2xl mx-auto">
             Delivering exceptional results across diverse luxury sectors and exclusive digital marketing solutions
@@ -31,7 +33,7 @@ const PortfolioSection: React.FC = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }} // 👈 one-time
           >
             <div className="relative h-[300px] overflow-hidden mb-6 bg-gradient-to-br from-gold-400/10 to-black border border-gold-400/20">
               <div className="flex items-center justify-center h-full">
@@ -55,7 +57,7 @@ const PortfolioSection: React.FC = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }} // 👈 one-time
           >
             <div className="relative h-[300px] overflow-hidden mb-6 bg-gradient-to-br from-gold-400/10 to-black border border-gold-400/20">
               <div className="flex items-center justify-center h-full">
@@ -79,7 +81,7 @@ const PortfolioSection: React.FC = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.4 }}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }} // 👈 one-time
           >
             <div className="relative h-[300px] overflow-hidden mb-6 bg-gradient-to-br from-gold-400/10 to-black border border-gold-400/20">
               <div className="flex items-center justify-center h-full">
@@ -103,7 +105,7 @@ const PortfolioSection: React.FC = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.6 }}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }} // 👈 one-time
           >
             <div className="relative h-[300px] overflow-hidden mb-6 bg-gradient-to-br from-gold-400/10 to-black border border-gold-400/20">
               <div className="flex items-center justify-center h-full">

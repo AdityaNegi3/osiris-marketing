@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const PortfolioSection: React.FC = () => {
   return (
@@ -25,7 +26,13 @@ const PortfolioSection: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-6">
           {/* 1 */}
-          <div className="group">
+          <motion.div
+            className="group"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            viewport={{ once: true, amount: 0.2 }}
+          >
             <div className="relative h-[300px] overflow-hidden mb-6 bg-gradient-to-br from-gold-400/10 to-black border border-gold-400/20">
               <div className="flex items-center justify-center h-full">
                 <div className="text-center">
@@ -40,10 +47,16 @@ const PortfolioSection: React.FC = () => {
             <p className="text-white/60 text-sm">
               Multi-million dollar campaigns for heritage luxury brands and emerging premium labels seeking market dominance.
             </p>
-          </div>
+          </motion.div>
 
           {/* 2 */}
-          <div className="group">
+          <motion.div
+            className="group"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
+          >
             <div className="relative h-[300px] overflow-hidden mb-6 bg-gradient-to-br from-gold-400/10 to-black border border-gold-400/20">
               <div className="flex items-center justify-center h-full">
                 <div className="text-center">
@@ -58,10 +71,16 @@ const PortfolioSection: React.FC = () => {
             <p className="text-white/60 text-sm">
               Bespoke digital experiences and sophisticated web platforms for luxury brands and high-profile clients.
             </p>
-          </div>
+          </motion.div>
 
           {/* 3 */}
-          <div className="group">
+          <motion.div
+            className="group"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut', delay: 0.4 }}
+            viewport={{ once: true, amount: 0.2 }}
+          >
             <div className="relative h-[300px] overflow-hidden mb-6 bg-gradient-to-br from-gold-400/10 to-black border border-gold-400/20">
               <div className="flex items-center justify-center h-full">
                 <div className="text-center">
@@ -76,10 +95,16 @@ const PortfolioSection: React.FC = () => {
             <p className="text-white/60 text-sm">
               Advanced CRM systems and automated marketing workflows for sophisticated client engagement and lead nurturing.
             </p>
-          </div>
+          </motion.div>
 
           {/* 4 — CENTER on desktop */}
-          <div className="group lg:col-start-2 lg:row-start-2">
+          <motion.div
+            className="group lg:col-start-2 lg:row-start-2"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut', delay: 0.6 }}
+            viewport={{ once: true, amount: 0.2 }}
+          >
             <div className="relative h-[300px] overflow-hidden mb-6 bg-gradient-to-br from-gold-400/10 to-black border border-gold-400/20">
               <div className="flex items-center justify-center h-full">
                 <div className="text-center">
@@ -94,7 +119,7 @@ const PortfolioSection: React.FC = () => {
             <p className="text-white/60 text-sm">
               Strategic advertising campaigns across premium platforms with sophisticated targeting and ROI optimization.
             </p>
-          </div>
+          </motion.div>
         </div>
 
         <div className="text-center mt-16">

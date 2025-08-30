@@ -46,12 +46,13 @@ const ServicesSection: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-          {/* Service Visual - animate from left */}
+          {/* Service Visual - animate from left when in view */}
           <motion.div
             className="relative h-[500px] order-2 lg:order-1"
             initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.2 }}
           >
             <div className="absolute inset-0 bg-gradient-to-br from-gold-400/20 via-gold-400/10 to-black border border-gold-400/30">
               <div className="flex items-center justify-center h-full">
@@ -68,12 +69,13 @@ const ServicesSection: React.FC = () => {
             </div>
           </motion.div>
 
-          {/* Service Information - animate from right */}
+          {/* Service Information - animate from right when in view */}
           <motion.div
             className="order-1 lg:order-2"
             initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.2 }}
           >
             <div className="space-y-8">
               {services.map((item, index) => (

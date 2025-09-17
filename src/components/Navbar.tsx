@@ -70,6 +70,17 @@ const Navbar: React.FC = () => {
           isOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
         }`}
       >
+        {/* Close Button inside Menu */}
+        <div className="absolute top-6 right-6">
+          <button
+            onClick={() => setIsOpen(false)}
+            className="text-white focus:outline-none"
+            aria-label="Close Menu"
+          >
+            <X size={28} />
+          </button>
+        </div>
+
         <div className="flex flex-col h-full pt-20 px-8 space-y-8">
           <a
             href="#about"

@@ -7,7 +7,9 @@ const AboutSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="order-1">
-            <h2 className="text-white text-3xl md:text-4xl font-light tracking-wide mb-8">Marketing Redefined</h2>
+            <h2 className="text-white text-3xl md:text-4xl font-light tracking-wide mb-8">
+              Marketing Redefined
+            </h2>
             <div className="w-20 h-[1px] bg-gold-400 mb-8"></div>
             <p className="text-white/80 mb-6 leading-relaxed">
               OSIRIS is not your typical marketing agency. We are the architects of desire, the curators of
@@ -42,8 +44,8 @@ const AboutSection: React.FC = () => {
             </a>
           </div>
 
-          {/* Image box */}
-          <div className="order-2 relative">
+          {/* Image box (HIDDEN on mobile, visible only from md breakpoint) */}
+          <div className="order-2 relative hidden md:block">
             <div className="relative h-[400px] md:h-[500px] border border-gold-400/20 rounded-lg overflow-hidden">
               {/* background image from /public */}
               <div

@@ -26,7 +26,7 @@ const AboutSection: React.FC = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <p className="text-white text-lg font-light">Aditya Negi</p>
-                  <p className="text-white/60 text-sm mt-1">Founder & Chief Strategy Officer</p>
+                  <p className="text-white/60 text-sm mt-1">Founder & Chief Executive Officer</p>
                 </div>
                 <div>
                   <p className="text-white text-lg font-light">Bibin Mathew</p>

@@ -112,7 +112,7 @@ const ServicesSection: React.FC = () => {
 
             <div className="mt-12">
               <a
-                href="#consultation"
+                href="consultation"
                 className="inline-block bg-transparent border border-gold-400 text-gold-400 px-6 py-3 text-sm tracking-wider hover:bg-gold-400/10 transition-all"
               >
                 SCHEDULE CONSULTATION

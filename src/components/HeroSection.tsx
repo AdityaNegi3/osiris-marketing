@@ -61,7 +61,7 @@ const HeroSection: React.FC = () => {
           </p>
 
           <a
-            href="#consultation"
+            href="consultation"
             className="inline-block border border-gold-400 text-gold-400 px-4 sm:px-8 py-2 sm:py-3 text-sm sm:text-base tracking-wider rounded-md hover:bg-gold-400/10 transition-all max-w-full"
           >
             REQUEST CONSULTATION

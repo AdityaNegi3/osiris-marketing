@@ -126,7 +126,7 @@ const PortfolioSection: React.FC = () => {
 
         <div className="text-center mt-16">
           <a
-            href="#consultation"
+            href="consultation"
             className="inline-block bg-transparent border border-gold-400 text-gold-400 px-8 py-3 text-sm tracking-wider hover:bg-gold-400/10 transition-all"
           >
             DISCUSS YOUR PROJECT

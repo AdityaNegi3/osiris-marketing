@@ -36,7 +36,7 @@ const AboutSection: React.FC = () => {
             </div>
 
             <a
-              href="#services"
+              href="services"
               className="text-gold-400 inline-flex items-center tracking-wider hover:text-gold-300 transition-colors group"
             >
               EXPLORE OUR SERVICES

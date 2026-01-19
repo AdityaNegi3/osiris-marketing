@@ -31,7 +31,13 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-white text-sm font-light tracking-wider mb-4">CONTACT</h4>
             <p className="text-white/60 text-sm mb-2">By appointment only</p>
-            <p className="text-white/60 text-sm">osirisvip.life@gmail.com</p>
+            {/* Updated Email Link */}
+            <a 
+              href="mailto:adi@osirismarketing.site" 
+              className="text-white/60 hover:text-gold-400 text-sm transition-colors block"
+            >
+              adi@osirismarketing.site
+            </a>
           </div>
 
           {/* Legal */}

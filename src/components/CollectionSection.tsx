@@ -17,9 +17,9 @@ const ServicesSection: React.FC = () => {
     },
     {
       id: 2,
-      title: "WEB DEVELOPMENT",
+      title: "WEB & APP DEVELOPMENT",
       description:
-        "Bespoke website development and digital experiences crafted exclusively for luxury brands and high-profile clients.",
+        "Bespoke website/app development and digital experiences crafted exclusively for luxury brands and high-profile clients.",
     },
     {
       id: 3,

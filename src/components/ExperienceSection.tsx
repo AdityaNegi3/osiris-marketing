@@ -69,9 +69,9 @@ const PortfolioSection: React.FC = () => {
                 </div>
               </div>
             </div>
-            <h3 className="text-white text-xl font-light tracking-wide mb-3">Premium Web Development</h3>
+            <h3 className="text-white text-xl font-light tracking-wide mb-3">Premium Web / App Development</h3>
             <p className="text-white/60 text-sm">
-              Bespoke digital experiences and sophisticated web platforms for luxury brands and high-profile clients.
+              Bespoke digital experiences and sophisticated web/app platforms for luxury brands and high-profile clients.
             </p>
           </motion.div>
 

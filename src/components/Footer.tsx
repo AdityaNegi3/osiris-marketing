@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
             <h4 className="text-white text-sm font-light tracking-wider mb-4">SERVICES</h4>
             <ul className="space-y-2">
               <li><a href="#services" className="text-white/60 hover:text-gold-400 text-sm transition-colors">Luxury Brand Strategy</a></li>
-              <li><a href="#services" className="text-white/60 hover:text-gold-400 text-sm transition-colors">Web Development</a></li>
+              <li><a href="#services" className="text-white/60 hover:text-gold-400 text-sm transition-colors">Web/App Development</a></li>
               <li><a href="#services" className="text-white/60 hover:text-gold-400 text-sm transition-colors">CRM & Automation</a></li>
               <li><a href="#services" className="text-white/60 hover:text-gold-400 text-sm transition-colors">Lead Generation</a></li>
             </ul>

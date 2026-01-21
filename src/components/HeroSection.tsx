@@ -21,6 +21,13 @@ const HeroSection: React.FC = () => {
     }
   }, []);
 
+  const scrollToConsultation = () => {
+    const section = document.getElementById('consultation');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="relative h-screen w-screen max-w-full overflow-y-hidden bg-black">
       {/* Background Image */}
@@ -60,12 +67,12 @@ const HeroSection: React.FC = () => {
             organizations that demand nothing less than perfection.
           </p>
 
-          <a
-            href="consultation"
-            className="inline-block border border-gold-400 text-gold-400 px-4 sm:px-8 py-2 sm:py-3 text-sm sm:text-base tracking-wider rounded-md hover:bg-gold-400/10 transition-all max-w-full"
+          <button
+            onClick={scrollToConsultation}
+            className="inline-block border border-gold-400 text-gold-400 px-4 sm:px-8 py-2 sm:py-3 text-sm sm:text-base tracking-wider rounded-md hover:bg-gold-400/10 transition-all max-w-full cursor-pointer"
           >
             REQUEST CONSULTATION
-          </a>
+          </button>
         </motion.div>
       </div>
 

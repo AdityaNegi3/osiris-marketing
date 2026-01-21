@@ -37,8 +37,15 @@ const ServicesSection: React.FC = () => {
 
   const [activeIndex, setActiveIndex] = useState(0);
 
+  const scrollToConsultation = () => {
+    const section = document.getElementById('consultation');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section id="services" className="bg-black py-24 md:py-32">
+    <section id="services-section" className="bg-black py-24 md:py-32">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-white text-3xl md:text-4xl font-light tracking-wide mb-4">
@@ -111,12 +118,12 @@ const ServicesSection: React.FC = () => {
             </div>
 
             <div className="mt-12">
-              <a
-                href="consultation"
-                className="inline-block bg-transparent border border-gold-400 text-gold-400 px-6 py-3 text-sm tracking-wider hover:bg-gold-400/10 transition-all"
+              <button
+                onClick={scrollToConsultation}
+                className="inline-block bg-transparent border border-gold-400 text-gold-400 px-6 py-3 text-sm tracking-wider hover:bg-gold-400/10 transition-all cursor-pointer"
               >
                 SCHEDULE CONSULTATION
-              </a>
+              </button>
             </div>
           </motion.div>
         </div>

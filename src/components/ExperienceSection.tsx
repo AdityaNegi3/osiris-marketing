@@ -2,6 +2,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const PortfolioSection: React.FC = () => {
+  const scrollToConsultation = () => {
+    const section = document.getElementById('consultation');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="portfolio" className="bg-black py-24 md:py-32 relative overflow-hidden">
       {/* Background pattern */}
@@ -33,7 +40,7 @@ const PortfolioSection: React.FC = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            viewport={{ once: true, amount: 0.2 }} // 👈 one-time
+            viewport={{ once: true, amount: 0.2 }}
           >
             <div className="relative h-[300px] overflow-hidden mb-6 bg-gradient-to-br from-gold-400/10 to-black border border-gold-400/20">
               <div className="flex items-center justify-center h-full">
@@ -57,7 +64,7 @@ const PortfolioSection: React.FC = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
-            viewport={{ once: true, amount: 0.2 }} // 👈 one-time
+            viewport={{ once: true, amount: 0.2 }}
           >
             <div className="relative h-[300px] overflow-hidden mb-6 bg-gradient-to-br from-gold-400/10 to-black border border-gold-400/20">
               <div className="flex items-center justify-center h-full">
@@ -81,7 +88,7 @@ const PortfolioSection: React.FC = () => {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.4 }}
-            viewport={{ once: true, amount: 0.2 }} // 👈 one-time
+            viewport={{ once: true, amount: 0.2 }}
           >
             <div className="relative h-[300px] overflow-hidden mb-6 bg-gradient-to-br from-gold-400/10 to-black border border-gold-400/20">
               <div className="flex items-center justify-center h-full">
@@ -99,13 +106,13 @@ const PortfolioSection: React.FC = () => {
             </p>
           </motion.div>
 
-          {/* 4 — CENTER on desktop */}
+          {/* 4 */}
           <motion.div
             className="group lg:col-start-2 lg:row-start-2"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.6 }}
-            viewport={{ once: true, amount: 0.2 }} // 👈 one-time
+            viewport={{ once: true, amount: 0.2 }}
           >
             <div className="relative h-[300px] overflow-hidden mb-6 bg-gradient-to-br from-gold-400/10 to-black border border-gold-400/20">
               <div className="flex items-center justify-center h-full">
@@ -125,12 +132,12 @@ const PortfolioSection: React.FC = () => {
         </div>
 
         <div className="text-center mt-16">
-          <a
-            href="consultation"
-            className="inline-block bg-transparent border border-gold-400 text-gold-400 px-8 py-3 text-sm tracking-wider hover:bg-gold-400/10 transition-all"
+          <button
+            onClick={scrollToConsultation}
+            className="inline-block bg-transparent border border-gold-400 text-gold-400 px-8 py-3 text-sm tracking-wider hover:bg-gold-400/10 transition-all cursor-pointer"
           >
             DISCUSS YOUR PROJECT
-          </a>
+          </button>
         </div>
       </div>
     </section>

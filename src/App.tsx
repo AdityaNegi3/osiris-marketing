@@ -23,9 +23,19 @@ const Home = () => {
       <HeroSection />
       <AboutSection />
       <QuoteSection />
-      <ServicesSection />
+      
+      {/* TARGET: Services Section */}
+      <div id="services">
+        <ServicesSection />
+      </div>
+
       <PortfolioSection />
-      <ConsultationSection />
+      
+      {/* TARGET: Consultation Section */}
+      <div id="#consultation">
+        <ConsultationSection />
+      </div>
+
       <Footer />
     </div>
   );

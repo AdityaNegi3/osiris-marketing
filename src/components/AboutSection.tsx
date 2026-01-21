@@ -1,6 +1,14 @@
 import React from 'react';
 
 const AboutSection: React.FC = () => {
+  const scrollToServices = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const section = document.getElementById('services');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="about" className="bg-black py-24 md:py-32 relative">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
@@ -35,13 +43,13 @@ const AboutSection: React.FC = () => {
               </div>
             </div>
 
-            <a
-              href="services"
-              className="text-gold-400 inline-flex items-center tracking-wider hover:text-gold-300 transition-colors group"
+            <button
+              onClick={scrollToServices}
+              className="text-gold-400 inline-flex items-center tracking-wider hover:text-gold-300 transition-colors group cursor-pointer"
             >
               EXPLORE OUR SERVICES
               <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
-            </a>
+            </button>
           </div>
 
           {/* Image box (HIDDEN on mobile, visible only from md breakpoint) */}
